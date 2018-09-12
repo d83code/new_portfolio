@@ -80,7 +80,9 @@
   // Branding side
   &-branding {
     background: $primary-color;
-    t
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+
     // Slide from bootom
     &.show {
       transform: translate3d(0, 0, 0);
