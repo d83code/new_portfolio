@@ -1,3 +1,4 @@
+@import "fonts";
 @import "config";
 @import "menu";
 
@@ -11,7 +12,8 @@ body {
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
   line-height: 1.5;
 }
 
@@ -29,12 +31,12 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    background: rgba(darken($primary-color, 8), 0.5);
   }
 }
 
 a {
-  color: #fff;
+  color: #444;
   text-decoration: none;
 }
 
@@ -105,7 +107,7 @@ main {
   }
 
   .jobs {
-    background: lighten($primary-color, 5);
+    background: darken($primary-color, 10);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
   }
@@ -127,7 +129,7 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
   img {
     width: 100%;
-    border: 4px #fff solid;
+    border: 3px #fff solid;
 
     &:hover {
       opacity: 0.5;
@@ -146,7 +148,7 @@ main {
   margin-top: 1rem;
   div {
     font-size: 2rem;
-    border: 3px #fff solid;
+    border: 3px #e9e9ea solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 0.6rem;
     @include easeOut;
@@ -170,6 +172,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem;
   &:hover {
+    @include easeOut;
     background: $secondary-color;
     color: set-text-color($secondary-color);
   }
@@ -177,7 +180,7 @@ main {
 
 .btn-light {
   @extend .btn;
-  background: lighten($primary-color, 50);
+  background: darken($primary-color, 10);
   color: #333;
 }
 
